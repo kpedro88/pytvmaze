@@ -404,6 +404,10 @@ class WebChannel(object):
             self.country = data['country'].get('name')
             self.timezone = data['country'].get('timezone')
             self.code = data['country'].get('code')
+        else:
+            self.country = None
+            self.timezone = None
+            self.code = None
 
     def __repr__(self):
         return '<WebChannel(name={name},country={country})>'.format(name=self.name, country=self.country)
